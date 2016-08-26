@@ -2,7 +2,7 @@ machine:
    environment:
      ANDROID_HOME: /usr/local/android-sdk-linux
 dependencies:
-cache_directories:
+ cache_directories:
     - ~/.gradle
     - ~/.android
  override:
