@@ -14,6 +14,7 @@ dependencies:
 test:
   override:
     - ./gradlew assembleDebug
+    - ./gradlew jacocoTestReport
 
   post:
     - cp -r app/build/outputs $CIRCLE_ARTIFACTS
