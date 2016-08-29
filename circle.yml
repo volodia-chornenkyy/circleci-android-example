@@ -12,6 +12,10 @@ test:
   override:
     - ./gradlew assembleDebug
     - ./gradlew jacocoTestReport
+
+    # run lint checker
+    - lint app --html app/build/reports/lint-result.html
+
   post:
     - cp -r app/build/outputs $CIRCLE_ARTIFACTS
     - cp -r app/build/reports $CIRCLE_ARTIFACTS
