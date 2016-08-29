@@ -11,8 +11,8 @@ dependencies:
  pre:
     - |
       mkdir -p ~/.infer
-      if [ ! -e ~/.infer/infer-linux64-v0.1.0/infer/infer/bin ]; then
-        cd ~/.infer && wget https://github.com/facebook/infer/releases/download/v0.1.0/infer-linux64-v0.9.2.tar.xz
+      if [ ! -e ~/.infer/infer-linux64-v0.9.2/infer/infer/bin ]; then
+        cd ~/.infer && wget https://github.com/facebook/infer/releases/download/v0.9.2/infer-linux64-v0.9.2.tar.xz
         tar xf infer-linux64-v0.9.2.tar.xz
         rm infer-linux64-v0.9.2.tar.xz
       fi
