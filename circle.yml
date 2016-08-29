@@ -8,6 +8,7 @@ dependencies:
     - ~/.gradlew
  override:
    - (echo "Downloading Android SDK v24 now!")
+   - chmod +x ./environmentSetup.sh
    - (./environmentSetup.sh getAndroidSDK)
 test:
   override:
