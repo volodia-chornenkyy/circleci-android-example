@@ -10,4 +10,6 @@ if [ ! -e $DEPS ]; then
     echo y | android update sdk -u -a -t platform-tools &&
     echo y | android update sdk -u -a -t build-tools-24.0.1 &&
     touch $DEPS
+else
+    echo "SDK is cached"
 fi
