@@ -15,7 +15,7 @@ test:
 
     # run lint checker
     - ./gradlew build
-    - lint app --html app/build/reports/lint/lint-result.html
+    - lint app --html app/build/reports/lint-result.html
 
   post:
     # copy the result to $CIRCLE_ARTIFACTS folder
