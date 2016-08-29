@@ -17,7 +17,6 @@ dependencies:
         rm infer-linux64-v0.9.2.tar.xz
       fi
  override:
-   - (echo "Downloading Android SDK v24 now!")
    - chmod +x install-dependencies.sh
    - ./install-dependencies.sh
 test:
