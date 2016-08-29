@@ -2,23 +2,17 @@ machine:
  environment:
   ANDROID_HOME: /home/ubuntu/android
   INFER_HOME: ~/.infer/infer-linux64-v0.9.2/infer
-  PATH: $INFER_HOME/bin:$PATH
 dependencies:
  cache_directories:
     - ~/.android
     - ~/android
     - ~/.infer
  pre:
-    - |
-      mkdir -p ~/.infer
-      if [ ! -e $INFER_HOME/bin ]; then
-        cd ~/.infer && wget https://github.com/facebook/infer/releases/download/v0.9.2/infer-linux64-v0.9.2.tar.xz
-        tar xf infer-linux64-v0.9.2.tar.xz
-        rm infer-linux64-v0.9.2.tar.xz
-      fi
+    - chmod +x scripts/install-infer.sh
+    - ./scripts/install-infer.sh
  override:
-   - chmod +x install-dependencies.sh
-   - ./install-dependencies.sh
+   - chmod +x scripts/install-dependencies.sh
+   - ./scripts/install-dependencies.sh
 test:
   override:
     - ./gradlew assembleDebug
