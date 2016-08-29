@@ -1,7 +1,7 @@
 machine:
  environment:
   ANDROID_HOME: /home/ubuntu/android
-  INFER_HOME: /home/ubuntu/.infer/infer-linux64-v0.1.0/infer/infer
+  INFER_HOME: ~/.infer/infer-linux64-v0.9.2/infer/infer
   PATH: $INFER_HOME/bin:$PATH
 dependencies:
  cache_directories:
@@ -11,7 +11,7 @@ dependencies:
  pre:
     - |
       mkdir -p ~/.infer
-      if [ ! -e ~/.infer/infer-linux64-v0.9.2/infer/infer/bin ]; then
+      if [ ! -e $INFER_HOME/bin ]; then
         cd ~/.infer && wget https://github.com/facebook/infer/releases/download/v0.9.2/infer-linux64-v0.9.2.tar.xz
         tar xf infer-linux64-v0.9.2.tar.xz
         rm infer-linux64-v0.9.2.tar.xz
