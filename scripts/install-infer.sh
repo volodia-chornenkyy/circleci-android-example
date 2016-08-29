@@ -17,7 +17,8 @@ if [ ! -e $INFER_HOME/bin ]; then
 
     #./infer-linux64-v0.9.2/build-infer.sh
 
+    cd infer-linux64-v0.9.2
     ./autogen.sh
     ./configure
-    make java
+    make
 fi
