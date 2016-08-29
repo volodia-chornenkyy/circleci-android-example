@@ -9,8 +9,5 @@ if [ ! -e $INFER_HOME/bin ]; then
     tar xf infer-linux64-v0.9.2.tar.xz
     rm infer-linux64-v0.9.2.tar.xz
 
-    echo "Current folder content"
-    ls
-
-    ./build-infer.sh
+    ./infer-linux64-v0.9.2/infer/build-infer.sh
 fi
