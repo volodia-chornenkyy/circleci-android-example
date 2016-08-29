@@ -5,11 +5,10 @@ dependencies:
  cache_directories:
     - ~/.android
     - ~/android
-    - ~/.gradle
  override:
    - (echo "Downloading Android SDK v24 now!")
-   - chmod +x ./environmentSetup.sh
-   - (./environmentSetup.sh getAndroidSDK)
+   - chmod +x install-dependencies.sh
+   - ./install-dependencies.sh
 test:
   override:
     - ./gradlew assembleDebug
