@@ -9,13 +9,5 @@ if [ ! -e $INFER_HOME/bin ]; then
     tar xf infer-linux64-v0.9.2.tar.xz
     rm infer-linux64-v0.9.2.tar.xz
 
-    echo "\n\n----- infer-linux64-v0.9.2 content"
-    cd infer-linux64-v0.9.2
-    ls
-
-    echo "\n\n----- infer content"
-    cd infer
-    ls
-
-    ./infer-linux64-v0.9.2/infer/build-infer.sh
+    ./infer-linux64-v0.9.2/build-infer.sh
 fi
