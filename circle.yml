@@ -10,12 +10,8 @@ dependencies:
    - ./scripts/install-dependencies.sh
 test:
   override:
-    - ./gradlew assembleDebug
-    - ./gradlew jacocoTestReport
-
-    # run lint checker
     - ./gradlew build
-    - lint app --html app/build/reports/lint-result.html
+    - ./gradlew jacocoTestReport
 
   post:
     # copy the result to $CIRCLE_ARTIFACTS folder
