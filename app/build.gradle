@@ -26,6 +26,11 @@ android {
         html.enabled true
         xml.enabled false
     }
+    lintOptions {
+        textReport false
+        xmlReport false
+        htmlReport true
+    }
 }
 
 dependencies {
