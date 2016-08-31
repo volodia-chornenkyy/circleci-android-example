@@ -25,6 +25,8 @@ android {
         csv.enabled false
         html.enabled true
         xml.enabled false
+
+        excludes += ['**/*Activity*.*']
     }
     lintOptions {
         textReport false
