@@ -58,6 +58,10 @@ jobs:
     # This is based on your 1.0 configuration file or project settings
     - run: ./gradlew build
     - run: ./gradlew jacocoTestReport
+    - run:
+              command: |
+                cp -r app/build/reports $CIRCLE_TEST_REPORTS
+              when: on_fail
     # This is based on your 1.0 configuration file or project settings
     - run: cp -r app/build/outputs $CIRCLE_ARTIFACTS
     - run: cp -r app/build/reports $CIRCLE_TEST_REPORTS
