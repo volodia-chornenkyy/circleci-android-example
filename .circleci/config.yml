@@ -44,15 +44,16 @@ jobs:
         # These cache paths were specified in the 1.0 config
         - ~/.android
         - ~/android
-    - run:
-        command: |
-          mkdir -p build_artifacts
-          cp -r app/build/ build_artifacts
     # Test
     #   This would typically be a build job when using workflows, possibly combined with build
     # This is based on your 1.0 configuration file or project settings
     - run: ./gradlew build
     - run: ./gradlew jacocoTestReport
+    - run:
+        command: |
+          mkdir -p build_artifacts
+          cp -r app/build/ build_artifacts
+        when: always
     # Teardown
     # Save test results
     - store_test_results:
