@@ -50,11 +50,9 @@ jobs:
     - run: ./gradlew build
     - run: ./gradlew jacocoTestReport
     # Teardown
-    # Save test results
-    - store_test_results:
+    - store_artifacts:
         path: app/build/reports/tests
         destination: tests
-    # Save artifacts
     - store_artifacts:
         path: app/build/outputs
         destination: outputs
