@@ -32,6 +32,8 @@ android {
         textReport false
         xmlReport false
         htmlReport true
+
+        warningsAsErrors true
     }
 }
 
