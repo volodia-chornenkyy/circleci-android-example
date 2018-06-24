@@ -49,17 +49,15 @@ jobs:
     # This is based on your 1.0 configuration file or project settings
     - run: ./gradlew build
     - run: ./gradlew jacocoTestReport
-    - run:
-        command: |
-          mkdir -p build_artifacts
-          cp -r app/build/ build_artifacts
-        when: always
     # Teardown
     # Save test results
     - store_test_results:
-        path: build_artifacts/reports/tests
+        path: app/build/reports/tests
+        destination: tests
     # Save artifacts
     - store_artifacts:
-        path: build_artifacts/outputs
+        path: app/build/outputs
+        destination: outputs
     - store_artifacts:
-        path: build_artifacts/reports/lint-results.html
+        path: app/build/reports/lint-results.html
+        destination: lint
