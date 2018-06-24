@@ -51,8 +51,8 @@ jobs:
         # Any branch if there are none on the default branch - this should be unnecessary if you have your default branch configured correctly
         - v1-dep-
     # This is based on your 1.0 configuration file or project settings
-    - run: chmod +x scripts/install-dependencies.sh
-    - run: ./scripts/install-dependencies.sh
+    ##- run: chmod +x scripts/install-dependencies.sh potentially container already have everything
+    ##- run: ./scripts/install-dependencies.sh
     # Save dependency cache
     - save_cache:
         key: v1-dep-{{ .Branch }}-{{ epoch }}
