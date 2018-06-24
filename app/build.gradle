@@ -33,7 +33,7 @@ android {
         xmlReport false
         htmlReport true
 
-        warningsAsErrors true
+        warningsAsErrors false
     }
 }
 
