@@ -51,11 +51,18 @@ jobs:
     - run: ./gradlew jacocoTestReport
     # Teardown
     - store_artifacts:
+        name: Store test reports
         path: app/build/reports/tests
         destination: tests
     - store_artifacts:
+        name: Store apk and other outputs
         path: app/build/outputs
         destination: outputs
     - store_artifacts:
+        name: Store Lint report
         path: app/build/reports/lint-results.html
         destination: lint
+    - store_artifacts:
+        name: Store Jacoco report
+        path: app/build/reports/jacoco
+        destination: tests
