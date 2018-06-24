@@ -58,20 +58,12 @@ jobs:
     # This is based on your 1.0 configuration file or project settings
     - run: ./gradlew build
     - run: ./gradlew jacocoTestReport
-    - run:
-              command: |
-                cp -r app/build/reports $CIRCLE_TEST_REPORTS
-              when: on_fail
-    # This is based on your 1.0 configuration file or project settings
-    - run: cp -r app/build/outputs $CIRCLE_ARTIFACTS
-    - run: cp -r app/build/reports $CIRCLE_TEST_REPORTS
     # Teardown
-    #   If you break your build into multiple jobs with workflows, you will probably want to do the parts of this that are relevant in each
     # Save test results
     - store_test_results:
-        path: $CIRCLE_TEST_REPORTS
+        path: app/build/reports/tests
     # Save artifacts
     - store_artifacts:
-        path: $CIRCLE_ARTIFACTS
+        path: app/build/outputs
     - store_artifacts:
-        path: $CIRCLE_TEST_REPORTS
+        path: app/build/reports/lint-results.html
